@@ -78,72 +78,45 @@ while(opcion !== 15)
             break
 
         case "5":
-            alert("Bienvenido, estudiante")
+            alert("Bienvenido, estudiante. A continuación, ingrese las notas de las materias. Recuerde que debe ser un número del 1 al 10");
 
-            let fisica= obtenerNota("Física");
-            let quimica= obtenerNota("Química");
-            let biologia= obtenerNota("Biología");
-            let matematicas= obtenerNota("Matemática");
-            let informatica= obtenerNota("Informática");
-
-
-            //Obtener y validar notas
-
-            function obtenerNota(materia){
-                let nota;
-                do{
-                    console.log(" Ingrese nota de " + materia +":");
-                    nota = parseFloat(prompt(" Ingrese nota de " + materia + " entre 0 y 10 "));
-                    
-                    if(isNaN(nota) || nota < 0 || nota > 10 ){
-                        alert("Ingrese una nota entre 0 y 10");
-                        console.log(" ⚠ Error, nota no valida. Ingrese una nota entre 0 y 10");
-                    }
-                }while(isNaN(nota) || nota < 0 || nota >10 );
-
-                console.log(nota); //Muestra las notas debajo de la materia
-                return nota;
-            }
-
-
-            //Notas en consola
-
-            console.log("\n📌 Notas Ingresadas")
-            console.log("Física: "  + fisica);
-            console.log("Química: "  + quimica);
-            console.log("Biología: "  + biologia);
-            console.log("Matemáticas: "  + matematicas);
-            console.log("Informática: "  + informatica);
-
-
-            //Calculo de porcentaje final
-
-            let sumaNotas=  fisica + quimica + biologia + matematicas + informatica;
-            let porcentaje= (sumaNotas / 50) * 100;
-
-
-            //Calificación cuanlitativa
-
+            let fisica = parseInt(prompt("Ingrese su nota de física"));
+            let quimica = parseInt(prompt("Ingrese su nota de química"));
+            let biologia = parseInt(prompt("Ingrese su nota de biología"));
+            let matematicas = parseInt(prompt("Ingrese su nota de matemáticas"));
+            let informatica = parseInt(prompt("Ingrese su nota de informática"));
             let calificacion;
-            if(porcentaje >= 0 && porcentaje < 60){
-                calificacion= "Mala";
-            }else if(porcentaje >= 60 && porcentaje <= 80){
-                calificacion= "Buena"
+
+
+            if (fisica < 1 || fisica > 10 || quimica < 1 || quimica >10 || biologia < 1 || biologia > 10 || matematicas < 1 || matematicas > 10 || informatica < 1 || informatica > 10){
+                alert("Por favor ingrese nuevamente sus notas, las que ingresó enteriormente no eran válidas");
+                console.log("Por favor ingrese nuevamente sus notas, las que ingresó enteriormente no eran válidas")
+
             }else{
-                calificacion= "Excelente"
+                let suma = fisica + quimica +  biologia + matematicas + informatica;
+                alert("La suma de sus notas es: " + suma)
+                let porcentaje = (suma / 50) *100;
+
+                if(porcentaje <= 59.9){
+                    calificacion = "Mala";
+                    alert("Mala");
+                    console.log("Mala");
+
+                }else if(porcentaje <= 80){
+                    calificacion = "Buena";
+                    alert("Buena");
+                    console.log("Buena");
+
+                }else{
+                    calificacion = "Excelente";
+                    alert("Excelente");
+                    console.log("Excelente");
+                }
+
+                alert("Tu porcentaje es: " + porcentaje + " % y tú calificación es: " + calificacion);
+                console.log("Tu porcentaje es: " + porcentaje + " % y tú calificación es: " + calificacion);
+
             }
-
-
-            //Calculos en consola
-
-            console.log("\n📊 Calculo del rendimiento académico");
-            console.log("Suma total de notas: "  + sumaNotas);
-            console.log("Porcentaje obtenido " + porcentaje + " % ");
-            console.log("Tú calificación es " + calificacion);
-
-
-
-            console.log("\n✅ Tú porcentaje es: " + porcentaje + "% y tu calificación es: " + calificacion);
             break
             
         case "6":
