@@ -1,4 +1,5 @@
-console.log("¡Bienvenidos al Blackjack de 3 rondas!");
+
+console.log("¡Bienvenidos juego BlackJack, consta de 3 rondas!");
 
 function sacarCarta() {
     return Math.floor(Math.random() * 10) + 1;
@@ -29,7 +30,7 @@ function turnoJugador(numeroJugador) {
 }
 
 function determinarGanador(sumaJ1, sumaJ2) {
-    console.log("--- RESULTADO FINAL ---");
+    console.log("Resultado Final");
     if (sumaJ1 > 21 && sumaJ2 > 21) {
         console.log("Ambos jugadores se pasaron de 21. ¡Empate!");
     } else if (sumaJ1 > 21) {
