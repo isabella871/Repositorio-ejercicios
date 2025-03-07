@@ -1,0 +1,4 @@
+
+const calcularMenor = num => {
+    
+}

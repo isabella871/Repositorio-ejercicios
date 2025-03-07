@@ -1,8 +1,8 @@
 
 const esPrimo = num => {
-        // Verificar si el número es menor que 2 (Los números menores que 2 no son primos)
-        if (num < 2){
-            return false;
+    // Verificar si el número es menor que 2 (Los números menores que 2 no son primos)
+    if (num < 2){
+        return false;
     }
 
     // Verificar el número es 2 (el único número par primo)
@@ -28,8 +28,8 @@ const esPrimo = num => {
 
 }
 
-console.log(esPrimo(num = 7));
-console.log(esPrimo(num = 10));
-console.log(esPrimo(num = 17));
-console.log(esPrimo(num = 0));
-console.log(esPrimo(num = 1));
+console.log(esPrimo(7));
+console.log(esPrimo(10));
+console.log(esPrimo(17));
+console.log(esPrimo(0));
+console.log(esPrimo(1));
