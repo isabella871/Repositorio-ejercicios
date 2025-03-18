@@ -1,6 +1,7 @@
 
 function calcularSalario(horas) {
     let salario;
+    
     switch (true) {
         case (horas <= 10):
             salario = horas * 30000;
@@ -15,7 +16,7 @@ function calcularSalario(horas) {
 }
 
 function mostrarSalario(nombre, horas, salario) {
-    console.log("Señor/a" + nombre + ", el número de horas es" + horas + "su salario equivale a:" + salario);
+    console.log("Señor/a " + nombre + " , el número de horas es " + horas + " , por esto, su salario equivale a : " + salario);
 }
 
 let nombre = "Ana López";

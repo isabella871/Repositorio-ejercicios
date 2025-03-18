@@ -15,7 +15,5 @@ function cantidadRetirar(dinero) {
     console.log(cantidad);
 }
 
-
 let precio = 20000;
-
 cantidadRetirar(precio);
