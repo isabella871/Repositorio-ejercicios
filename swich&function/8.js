@@ -1,24 +1,35 @@
 
-function ingresarDias (mensaje){
-    let cantidadDías = promp(mensaje);
-    console.log("Los días ingresados fueron: " + dias);
-    return dias;
+alert ("Bienvenido a nuestro gimnacio");
+
+function calcularMensualidad (dias){
+    let mensualidad;
+
+    switch(dias){
+        case "15":
+            mensualidad =18000;
+            break;
+        case "30":
+            mensualidad = 35000;
+            break;
+        case "90":
+            mensualidad = 86000;
+            break;
+        default:
+            mensualidad = null;
+    }
+    return mensualidad;
 }
 
-function mostrararMensualidad (dias, mensualidad){
-
-    switch (mensualidad){
-        case "15":
-            if (dias == "15"){
-                mensualidad = 18000;
-            }else if (dias == "30"){
-                mensualidad = 35000;
-            }else if (dias == "90"){
-                mensualidad = 86000;
-            }else{
-                console.log("El precio a pagar es: " + mensualidad)
-                alert("El precio a pagar es: " + mensualidad)
-            }
-            break;
+function mostrarValor (mensualidad){
+    if (mensualidad != null){
+        console.log("El precio a pagar es: " + mensualidad);
+        alert ("El precio a pagar es: " + mensualidad);
+    }else{
+        console.log("Los datos ingresados son invalidos. Por favor ingrese la información correspondiente");
+        alert("Los datos ingresados son invalidos. Por favor ingrese la información correspondiente")
     }
 }
+
+let dias = prompt("Escoja entre los siguientes días: 15, 30 o 90 días")
+let mensualidad = calcularMensualidad(dias);
+mostrarValor(mensualidad);
