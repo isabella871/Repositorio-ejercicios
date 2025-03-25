@@ -1,8 +1,12 @@
+//Corregir que si el operador no es correcto vuelva a ingresarlo
+//Que verifique si el valor ingresado relamente es un número
+//Que se repita hasta que los campos ingresados sean validos
+
 let operador = prompt("Ingrese su operador (Tigo, Claro, Movistar):").toLowerCase();
 let minutos = parseInt(prompt("Ingrese la cantidad de minutos internacionales consumidos:"));
 
 if (isNaN(minutos) || minutos < 0) {
-    console.log("Error. Ingrese un número válido de minutos.");
+    alert("Error. Ingrese un número válido de minutos.");
 
 } else {
     let cargoFijo, valorMinuto, valorPaquete;
@@ -14,7 +18,7 @@ if (isNaN(minutos) || minutos < 0) {
     } else if (operador === "movistar") {
         cargoFijo = 40000; valorMinuto = 250; valorPaquete = 8000;
     } else {
-        console.log("Error: Operador no válido. Ingrese Tigo, Claro o Movistar.");
+        alert("Error: Operador no válido. Ingrese Tigo, Claro o Movistar.");
         cargoFijo = valorMinuto = valorPaquete = 0; // No calcula si el operador es inválido
     }
 

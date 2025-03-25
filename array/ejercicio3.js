@@ -3,7 +3,7 @@ let cola = [];
 const capacidadMaxima = 7; 
 
 const agregarCliente = (nombre) => {
-    nombre = nombre. n ()
+    nombre = nombre.trim()
     if (nombre.length === 0) {
         alert("Debe ingresar un nombre válido.")
         return;
@@ -11,9 +11,9 @@ const agregarCliente = (nombre) => {
 
     if (cola.length < capacidadMaxima) {
         cola.push(nombre);
-        alert(nombre + "ha sido agregado a la cola")
+        alert(nombre +   " ha sido agregado a la cola")
     } else {
-        alert("La cola está llena " + nombre +  "no puede ingresar");
+        alert("La cola está llena " + nombre +  " no puede ingresar");
     }
 }
 
@@ -35,7 +35,7 @@ const mostrarCola = () => {
     } else {
         alert("Clientes en la cola:");
         cola.forEach((cliente, index) => {
-            alert(index + 1 + "" + cliente);
+            alert(index  +  1  +  ""  +  cliente);
         });
     }
 }
@@ -43,7 +43,7 @@ const mostrarCola = () => {
 
 const buscarCliente = (nombre) => {
     if (cola.some(cliente => cliente.toLowerCase() === nombre.toLowerCase())) {
-        (nombre +  " está en la cola");
+        alert(nombre +  " está en la cola");
     } else {
         alert(nombre + " no está en la cola");
     }

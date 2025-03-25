@@ -1,3 +1,7 @@
+//Si los campos requeridos no son correctos no se continua el programa
+//Se debe ingresar un número en el tamaño del sandwich isNaN
+
+
 alert("Bienvenido a SandwichOrder");
 console.log("Bienvenido a SandwichOrder");
 

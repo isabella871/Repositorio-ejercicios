@@ -1,7 +1,3 @@
-//Arreglar por medio de un bucle que hasta que la información cporrrespondiente no sea ingresada 
-// el programa no continuará (el precio del gimnacio, los días)
-// Además que no se muestre el alert con la información erronea
-
 alert("Bienvenido a nuestro gimnasio");
 
 let mensualidad = prompt("Ingrese el costo de mensualidad que desea pagar: 18000 (15 días), 35000 (30 días), 86000 (90 días)");
