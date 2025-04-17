@@ -1,4 +1,3 @@
-
 function obtenerNota(materia){
     let nota = parseInt(prompt("Ingrese su nota de: " + materia + "entre 1 y 10"));
 
