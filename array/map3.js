@@ -51,7 +51,7 @@ const buscarCliente = (nombre) => {
 
 const eliminarDuplicados = () => {
     cola = cola.filter((cliente, index, arr) => arr.indexOf(cliente) === index);
-    alert("Se han eliminado los clientes duplicados en la cola.");
+    alert("Se han eliminado los clientes duplicados en la cola");
 }
 
 

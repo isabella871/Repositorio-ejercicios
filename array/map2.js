@@ -1,12 +1,9 @@
-
 let saldo = 0;
 let transacciones = [0, 0, 0, 0, 0];
 
-
 const mostrarSaldo = () => {
     alert("Su saldo es: " + saldo)
-}
-
+};
 
 const deposito = (monto) => {
     monto = Number(monto)
@@ -17,8 +14,7 @@ const deposito = (monto) => {
         transacciones.shift()
     }
     alert ("Se ha depositado: " + monto + " Su saldo ahora es de: " + saldo)
-}
-
+};
 
 const retirarDinero = (monto) => {
     monto = Number(monto)
@@ -27,21 +23,17 @@ const retirarDinero = (monto) => {
         alert("Su saldo es insuficiente para retirar")
         return;
     }
-
     if( monto > 500){
         alert("No puede retirar más de 500 en una sola transacción")
         return;
     }
-    
     saldo -= monto;
     transacciones.push(-monto)
-
     if(transacciones.length > 5){
         transacciones.shift()
     }
     alert("Ha sido retirado: "  + monto +  " ahora, su saldo es de: "  + saldo)
-}
-
+};
 
 const verTransacciones = () => {
     alert("Ver las últimas cinco transacciones: " + transacciones)
@@ -50,7 +42,7 @@ const verTransacciones = () => {
         let tipoTransaccion = t > 0 ? "Deposito" : "Retiro"
         alert("Transacción " + tipoTransaccion + " : " + Math.abs(t)) 
     })
-}
+};
 
 
 while(true){
@@ -73,4 +65,3 @@ while(true){
         alert("Opción invalida. Por favor, intene de nuevo")
     }
 }
-
